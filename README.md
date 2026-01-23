@@ -12,7 +12,7 @@ A web-based piano fingering generation system powered by **complete Dyna-Q reinf
 
 ## 🎵 Live Demo
 
-**Try It Now**: https://piano-fingering-generator-a05.vercel.app/
+**Try It Now**: https://piano-fingering-generator-a07.vercel.app/
 
 ---
 
@@ -90,6 +90,7 @@ This implementation uses the **complete Dyna-Q algorithm**, combining model-base
 | Mobile       | Any       | 1       | 10,000          | 10,000         |
 
 **Q-Table Merging:**
+
 - Simple averaging of Q-values from multiple workers
 - Based on ensemble learning theory
 - Reduces variance and improves robustness
@@ -120,28 +121,32 @@ This implementation uses the **complete Dyna-Q algorithm**, combining model-base
 
 #### 🌐 Online Version (Recommended)
 
-Visit the live demo: https://piano-fingering-generator-a05.vercel.app/
+Visit the live demo: https://piano-fingering-generator-a07.vercel.app/
 
 #### 💻 Local Development
 
 1. **Clone the repository**
+
 ```bash
-git clone https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A05.git
-cd Piano-Fingering-Generator-A05
+git clone https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A07.git
+cd Piano-Fingering-Generator-A07
 ```
 
 2. **Install dependencies**
+
 ```bash
 cd frontend
 npm install
 ```
 
 3. **Start development server**
+
 ```bash
 npm run dev
 ```
 
 4. **Open your browser**
+
 ```
 http://localhost:3000
 ```
@@ -282,6 +287,7 @@ Open `START_DEBUG.html` in your browser for a guided debugging experience.
 **Method 1**: Click "Clear Cache (Debug)" button on the page
 
 **Method 2**: Run in browser console:
+
 ```javascript
 indexedDB.deleteDatabase('PianoFingeringDB').then(() => location.reload())
 ```
@@ -310,6 +316,7 @@ This version implements **true multi-core parallel training** using Web Workers:
 | Mobile       | 1       | 1x (baseline)     | ~80 seconds               |
 
 **Console Output:**
+
 ```
 Using 4 worker(s) for parallel training
 Worker 1/4 created successfully
@@ -328,6 +335,7 @@ Merging 4 Q-tables...
 The TypeScript implementation preserves 100% of the original Julia algorithm logic with complete Dyna-Q implementation:
 
 **Core Dyna-Q Algorithm:**
+
 - ε-greedy exploration policy
 - Q-value update formula: `Q(s,a) += α * (r + γ * max(Q(s',a')) - Q(s,a))`
 - Model learning: `Model[(s,a)] = (s', r)`
@@ -337,6 +345,7 @@ The TypeScript implementation preserves 100% of the original Julia algorithm log
 - Learning rate: 0.99, Exploration rate: 0.8
 
 **Reward Function (Preserved Exactly):**
+
 - Single finger strength scoring
 - Hand movement distance calculation
 - Finger stretch rate evaluation
@@ -344,6 +353,7 @@ The TypeScript implementation preserves 100% of the original Julia algorithm log
 - Chord range consideration
 
 **Helper Functions (All Preserved):**
+
 - `key_distance`: Keyboard distance calculation
 - `relative_position`: Note position on keyboard
 - `hand_move_distance`: Hand movement calculation
@@ -359,6 +369,7 @@ The TypeScript implementation preserves 100% of the original Julia algorithm log
 - Edge 90+ ✅
 
 Requires:
+
 - Web Workers support
 - IndexedDB support
 - ES2020+ features
@@ -368,6 +379,7 @@ Requires:
 #### Deployment Verification ✓
 
 Build Status: **SUCCESS**
+
 - Static export: ✓ Generated in `frontend/out/`
 - Configuration: ✓ All files correct
 - Dependencies: ✓ All installed
@@ -388,6 +400,7 @@ The app will be automatically deployed and available at your Vercel URL.
 #### GitHub Pages
 
 1. Build the static site:
+
 ```bash
 cd frontend
 npm run build
@@ -421,10 +434,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This project is based on the original [PianoFingering.jl](https://github.com/Nero-Blackstone/PianoFingering.jl) research.
 
 **Original Research:**
+
 - Reinforcement learning algorithm for piano fingering
 - Dyna-Q implementation for MDP-based fingering generation
 
 **Open Source Libraries:**
+
 - Next.js - React framework
 - TypeScript - Type-safe JavaScript
 - Tailwind CSS - Utility-first CSS framework
@@ -433,14 +448,15 @@ This project is based on the original [PianoFingering.jl](https://github.com/Ner
 - idb - IndexedDB wrapper
 
 **Community:**
+
 - Julia community for scientific computing ecosystem
 - TypeScript and Next.js communities
 - All open-source contributors
 
 ### 📞 Support
 
-- 🐛 [Issue Tracker](https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A05/issues)
-- 💬 [Discussions](https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A05/discussions)
+- 🐛 [Issue Tracker](https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A07/issues)
+- 💬 [Discussions](https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A07/discussions)
 
 ---
 
@@ -518,6 +534,7 @@ This project is based on the original [PianoFingering.jl](https://github.com/Ner
 | 移动设备 | 任意    | 1          | 10,000       | 10,000   |
 
 **Q表合并：**
+
 - 多个Worker的Q值简单平均
 - 基于集成学习理论
 - 降低方差，提高鲁棒性
@@ -548,28 +565,32 @@ This project is based on the original [PianoFingering.jl](https://github.com/Ner
 
 #### 🌐 在线版本（推荐）
 
-访问在线演示：https://piano-fingering-generator-a05.vercel.app/
+访问在线演示：https://piano-fingering-generator-a07.vercel.app/
 
 #### 💻 本地开发
 
 1. **克隆仓库**
+
 ```bash
-git clone https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A05.git
-cd Piano-Fingering-Generator-A05
+git clone https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A07.git
+cd Piano-Fingering-Generator-A07
 ```
 
 2. **安装依赖**
+
 ```bash
 cd frontend
 npm install
 ```
 
 3. **启动开发服务器**
+
 ```bash
 npm run dev
 ```
 
 4. **打开浏览器**
+
 ```
 http://localhost:3000
 ```
@@ -622,14 +643,15 @@ http://localhost:3000
 
 **性能提升：**
 
-| 设备       | Workers | 速度提升        | 训练时间（100音符） |
-| ---------- | ------- | --------------- | ------------------- |
-| 8+核心PC   | 4       | **快3.5倍**     | ~25秒               |
-| 4-7核心PC  | 2       | **快1.8倍**     | ~45秒               |
-| <4核心PC   | 1       | 1x（基准）      | ~80秒               |
-| 移动设备   | 1       | 1x（基准）      | ~80秒               |
+| 设备      | Workers | 速度提升    | 训练时间（100音符） |
+| --------- | ------- | ----------- | ------------------- |
+| 8+核心PC  | 4       | **快3.5倍** | ~25秒               |
+| 4-7核心PC | 2       | **快1.8倍** | ~45秒               |
+| <4核心PC  | 1       | 1x（基准）  | ~80秒               |
+| 移动设备  | 1       | 1x（基准）  | ~80秒               |
 
 **控制台输出：**
+
 ```
 Using 4 worker(s) for parallel training
 Worker 1/4 created successfully
@@ -648,6 +670,7 @@ Merging 4 Q-tables...
 TypeScript实现保留了原始Julia算法逻辑的100%，并完整实现了Dyna-Q算法:
 
 **核心 Dyna-Q 算法：**
+
 - ε-贪心探索策略
 - Q值更新公式：`Q(s,a) += α * (r + γ * max(Q(s',a')) - Q(s,a))`
 - 模型学习：`Model[(s,a)] = (s', r)`
@@ -664,6 +687,7 @@ TypeScript实现保留了原始Julia算法逻辑的100%，并完整实现了Dyna
 - Edge 90+ ✅
 
 需要：
+
 - Web Workers 支持
 - IndexedDB 支持
 - ES2020+ 特性
@@ -673,10 +697,12 @@ TypeScript实现保留了原始Julia算法逻辑的100%，并完整实现了Dyna
 本项目基于原始的 [PianoFingering.jl](https://github.com/Nero-Blackstone/PianoFingering.jl) 研究。
 
 **原始研究：**
+
 - 钢琴指法的强化学习算法
 - 基于MDP的Dyna-Q指法生成实现
 
 **开源库：**
+
 - Next.js - React框架
 - TypeScript - 类型安全的JavaScript
 - Tailwind CSS - 实用优先的CSS框架
@@ -760,6 +786,7 @@ TypeScript实现保留了原始Julia算法逻辑的100%，并完整实现了Dyna
 | モバイル       | 任意    | 1          | 10,000                   | 10,000         |
 
 **Qテーブルマージ：**
+
 - 複数のワーカーからのQ値の単純平均
 - アンサンブル学習理論に基づく
 - 分散を減らし、ロバスト性を向上
@@ -790,28 +817,32 @@ TypeScript实现保留了原始Julia算法逻辑的100%，并完整实现了Dyna
 
 #### 🌐 オンライン版（推奨）
 
-ライブデモにアクセス：https://piano-fingering-generator-a05.vercel.app/
+ライブデモにアクセス：https://piano-fingering-generator-a07.vercel.app/
 
 #### 💻 ローカル開発
 
 1. **リポジトリをクローン**
+
 ```bash
-git clone https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A05.git
-cd Piano-Fingering-Generator-A05
+git clone https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A07.git
+cd Piano-Fingering-Generator-A07
 ```
 
 2. **依存関係をインストール**
+
 ```bash
 cd frontend
 npm install
 ```
 
 3. **開発サーバーを起動**
+
 ```bash
 npm run dev
 ```
 
 4. **ブラウザを開く**
+
 ```
 http://localhost:3000
 ```
@@ -853,10 +884,12 @@ http://localhost:3000
 このプロジェクトは、オリジナルの [PianoFingering.jl](https://github.com/Nero-Blackstone/PianoFingering.jl) 研究に基づいています。
 
 **オリジナル研究：**
+
 - ピアノ運指のための強化学習アルゴリズム
 - MDPベースのDyna-Q運指生成実装
 
 **オープンソースライブラリ：**
+
 - Next.js - Reactフレームワーク
 - TypeScript - 型安全なJavaScript
 - Tailwind CSS - ユーティリティファーストCSSフレームワーク
@@ -886,8 +919,8 @@ This repository and its contents are protected by copyright law. No part of this
 
 ## 🔗 Links
 
-- **Live Demo**: https://piano-fingering-generator-a05.vercel.app/
-- **GitHub Repository**: https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A05
+- **Live Demo**: https://piano-fingering-generator-a07.vercel.app/
+- **GitHub Repository**: https://github.com/JeffreyZhou798/Piano-Fingering-Generator-A07
 - **Original Project**: [PianoFingering.jl](https://github.com/Nero-Blackstone/PianoFingering.jl)
 - **Local Development**: http://localhost:3000
 
